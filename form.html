@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>survey-form</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1 id="title">Survey form</h1>
+    <p id="description">Fill out this form</p>
+    <form id="survey-form" action="index.php" method="post">
+      <fieldset>
+        <label for="name-label" id="name-label">Full Name: <input id="name" type="text" name="name" required placeholder="Enter Name"></label>
+        <label for="email" id="email-label" >Email: <input id="email" type="email" name="email" placeholder="Enter email"></label> 
+        <label for="number"id="number-label">Number: <input id="number" type="text" min="8" name ="number" max="120" required placeholder="Enter Number">
+      </fieldset>
+      <fieldset>
+        <legend>Account Type (required)</legend>
+<label for="personal-account"><input id="personal-account" type="radio" name="account" value="personal" class="inline" checked /> Personal</label>
+        <label for="business-account"><input id="business-account" type="radio" name="account" class="inline" value="business"/> Business</label>
+        </fieldset>
+             <fieldset>
+        <label for="profile-picture">Upload a profile picture: <input id="profile-picture" type="file" name="file" /></label>
+        <label for="age">Input your age (years): <input id="age" type="number" name="age" min="13" max="120" /></label>
+        <label for="referrer">How did you hear about us?
+          <select id="dropdown" name="referrer">
+            <option value="">(select one)</option>
+            <option value="1" selectable>News</option>
+            <option value="2" selectable>YouTube</option>
+            <option value="3">Other</option>
+          </select>
+        </label>
+        <label for="bio">Provide a bio:
+          <textarea id="bio" name="bio" rows="3" cols="30"></textarea>
+        </label>
+        <label for="terms-and-conditions">
+          <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms" /> I accept terms and conditions
+        </label>
+        <input type="submit" value="Submit"  name="submit"/>
+      </form>
+    </body>
+  </html>
